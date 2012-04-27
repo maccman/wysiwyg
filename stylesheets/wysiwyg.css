@@ -1,0 +1,80 @@
+.wysiwyg {
+  position: relative;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  margin-bottom: 5px;
+
+  border: 1px solid #333;
+  border-bottom-color: transparent;
+  border-radius: 8px;
+
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.30);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.30);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.30);
+
+  background: #000;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.30)), color-stop(0.5, rgba(255,255,255,0.10)), color-stop(0.5, rgba(255,255,255,0.00))), -webkit-gradient(linear, left top, left bottom, from(#5c5c5c), to(#292929));
+  background: -moz-linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.10) 50%, rgba(255,255,255,0.00) 50%), -moz-linear-gradient(#5c5c5c, #292929);
+  background: linear-gradient(rgba(255,255,255,0.30), rgba(255,255,255,0.10) 50%, rgba(255,255,255,0.00) 50%), linear-gradient(#5c5c5c, #292929);
+
+  color: #fff;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.50);
+
+  font-family: 'Helvetica Neue', Helvetica, Arial Geneva, sans-serif;
+  font-size: 12px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none;
+  font-weight: bold;
+}
+
+.wysiwyg a {
+  padding: 0 13px;
+  border-right: 1px solid rgba(0,0,0,0.30);
+
+  -moz-box-shadow: 1px 0 1px rgba(255,255,255,0.20);
+  -webkit-box-shadow: 1px 0 1px rgba(255,255,255,0.20);
+  box-shadow: 1px 0 1px rgba(255,255,255,0.20);
+
+  cursor: pointer;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  float: left;
+}
+
+.wysiwyg a:first-child {
+  -webkit-border-radius: 7px 0 0 7px;
+}
+
+.wysiwyg a:last-child {
+  -webkit-border-radius: 0 7px 7px 0;
+  border-right: none;
+}
+
+.wysiwyg a:active,
+.wysiwyg a.active {
+  background: #5f9fe6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#5f9fe6), to(#3a7ac1));
+  background: -moz-linear-gradient(top, #5f9fe6, #3a7ac1);
+  background: linear-gradient(top, #5f9fe6, #3a7ac1);
+
+  -moz-box-shadow: inset 0 0 15px rgba(0,0,0,0.10);
+  -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.10);
+  -moz-box-shadow: inset 0 0 15px rgba(0,0,0,0.10);
+  -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.10);
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.10);
+}
+
+.wysiwyg:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 20px;
+  width: 0px;
+  height: 0px;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #292929;
+}

@@ -1,51 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" href="site/wysiwyg.css" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript" charset="utf-8"></script>
-  <script src="lib/wysiwyg.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript" charset="utf-8">
-    jQuery(function(){
-      var textarea = $('.area');
-      var wysiwyg  = new Wysiwyg;
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>WYSIWYG by maccman</title>
 
-      textarea.before(wysiwyg.el);
-    });
-  </script>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-  <style type="text/css" media="screen">
-    body {
-      color: #000;
-      font: 13px/1.5em "Lucida Grande", Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-    .area {
-      width: 500px;
-      height: 500px;
+    <link rel="stylesheet" href="stylesheets/wysiwyg.css" type="text/css" charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://raw.github.com/maccman/wysiwyg/release/lib/wysiwyg.js" type="text/javascript" charset="utf-8"></script>
 
-      padding: 3px;
-      border: 1px solid rgba(0, 0, 0, 0.20);
+    <style type="text/css" media="screen">
+      .area {
+        width: 100%;
+        height: 100px;
 
-      -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.12);
-      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+        margin: 0 0 15px 0;
+        padding: 3px;
+        border: 1px solid rgba(0, 0, 0, 0.20);
 
-      overflow-x: auto;
-    }
+        -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.12);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12);
 
-    .area:focus {
-      outline: none;
-      border-color: rgba(102, 142, 198, 0.60);
-      -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.20), 0 1px 5px 0 rgba(102,142,198,0.60);
-      -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.20), 0 1px 5px 0 rgba(102, 142, 198, 0.60);
-      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.20), 0 1px 5px 0 rgba(102, 142, 198, 0.60);
-    }
-  </style>
-</head>
-<body>
-  <div class="area" contenteditable>
+        overflow-x: auto;
+      }
 
-  <div>
-</body>
+      .area:focus {
+        outline: none;
+        border-color: rgba(51, 153, 204, 0.5);
+        -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.20), 0 1px 5px 0 rgba(51, 153, 204, 0.4);
+        -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.20), 0 1px 5px 0 rgba(51, 153, 204, 0.4);
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.20), 0 1px 5px 0 rgba(51, 153, 204, 0.4);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>WYSIWYG</h1>
+        <p></p>
+        <p class="view"><a href="https://github.com/maccman/wysiwyg">View the Project on GitHub <small>maccman/wysiwyg</small></a></p>
+        <ul>
+          <li><a href="https://github.com/maccman/wysiwyg/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/maccman/wysiwyg/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/maccman/wysiwyg">Fork On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h3>Simple jQuery WYSIWYG.</h3>
+
+<div class="area" contenteditable>
+  Edit me...
+</div>
+
+<script type="text/javascript" charset="utf-8">
+  jQuery(function(){
+    var textarea = $('.area');
+    var wysiwyg  = new Wysiwyg;
+
+    textarea.before(wysiwyg.el);
+  });
+</script>
+
+<h3>Usage</h3>
+
+<ol>
+  <li>Include jQuery</li>
+  <li>Instantiate the <code>Wysiwyg</code> object, and append it to the page.</li>
+</ol>
+<p>
+For Example:
+  <pre>
+&lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;wysiwyg.js&quot;&gt;&lt;/script&gt;
+
+jQuery(function(){
+  var textarea = $(&#x27;.area&#x27;);
+  var wysiwyg  = new Wysiwyg;
+  textarea.before(wysiwyg.el);
+});</pre>
+</p>
+
+  </body>
 </html>
