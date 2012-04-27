@@ -1,6 +1,6 @@
-$ = @jQuery
+$ = @jQuery or require('jquery')
 
-class @Wysiwyg
+class Wysiwyg
   className: 'wysiwyg'
 
   events:
@@ -116,3 +116,9 @@ class @Wysiwyg
         @el.bind(eventName, method)
       else
         @el.delegate(selector, eventName, method)
+
+# Expose library
+if module?
+  module.exports = Wysiwyg
+else
+  @Wysiwyg = Wysiwyg
