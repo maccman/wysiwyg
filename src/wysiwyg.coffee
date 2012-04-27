@@ -51,6 +51,7 @@ class @Wysiwyg
   link: (e) ->
     e.preventDefault()
     return unless @selectTest()
+
     @exec 'unlink'
     href = prompt('Enter a link:', 'http://')
     return if not href or href is 'http://'
