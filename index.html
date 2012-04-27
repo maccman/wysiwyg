@@ -72,7 +72,8 @@
 
 <ol>
   <li>Include jQuery</li>
-  <li>Instantiate the <code>Wysiwyg</code> object, and append it to the page.</li>
+  <li>Instantiate the <code>Wysiwyg</code> object, and append it to the page</li>
+  <li>Enable the <code>contenteditable</code> attribute on an element</li>
 </ol>
 <p>
 For Example:
@@ -80,10 +81,12 @@ For Example:
 &lt;script src=&quot;jquery.js&quot;&gt;&lt;/script&gt;
 &lt;script src=&quot;wysiwyg.js&quot;&gt;&lt;/script&gt;
 
-jQuery(function(){
+&lt;div class=&quot;area&quot; contenteditable&gt;
+
+&lt;script&gt;
   var wysiwyg = new Wysiwyg;
   $(&#x27;.area&#x27;).before(wysiwyg.el);
-});</pre>
+&lt;/script&gt;</pre>
 </p>
 
   </body>
