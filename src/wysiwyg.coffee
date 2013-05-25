@@ -52,8 +52,14 @@ class Wysiwyg
     e.preventDefault()
     return unless @selectTest()
 
+    href = 'http://'
+    parentElement = window.getSelection().focusNode.parentElement
+    
+    if parentElement?.href
+      href = parentElement.href    
+
     @exec 'unlink'
-    href = prompt('Enter a link:', 'http://')
+    href = prompt('Enter a link:', href)
     return if not href or href is 'http://'
     href = 'http://' + href  unless (/:\/\//).test(href)
     @exec 'createLink', href
